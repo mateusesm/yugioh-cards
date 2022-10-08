@@ -11,12 +11,20 @@ export function Home() {
 
   const [ cards, setCards ] = useState([])
 
-  const handleGetCards = useCallback(() => {
+  const handleGetCards = useCallback( async () => {
 
-    getCards()
+    const offset = Math.floor(Math.random() * 101)
 
-    const objectCards = JSON.parse(localStorage.getItem('cards'))
-    const { data } = objectCards
+    if (!localStorage.key('card')) {
+      const objectCards = await getCards(offset ,12)
+      localStorage.setItem('cards', JSON.stringify(objectCards))
+    }
+
+    const localStorageDatas = JSON.parse(localStorage.getItem('cards'))
+
+    console.log(localStorageDatas)
+
+    const { data } = localStorageDatas
 
     const dataCards = data.map(data => (data.card_images[0]))
 
@@ -30,24 +38,43 @@ export function Home() {
 
   }, [handleGetCards])
 
+  const data = new Date()
+  const year = data.getFullYear()
+
   return (
     <div className="container">
 
-      <header>
-        <h1>yu-gi-oh cards</h1>
+      <header className='header'>
+        <a href="#"><h1>Yu-Gi-Oh!</h1></a>
+
+        <nav className='menu'>
+          <ul className='menu-list'>
+            <a className='menu-item' href="https://ygoprodeck.com/api-guide/" target='_blank'><li>API YGO PRO Deck</li></a>
+            <a className='menu-item' href="https://github.com/mateusesm" target='_blank'><li>GitHub</li></a>
+            <a className='menu-item' href="https://linkedin.com/in/mateusesm" target='_blank'><li>LinkedIn</li></a>
+          </ul>
+        </nav>
       </header>
-        
-      <input type="text"/>
 
-      <button>Pesquisar</button>
+      <main className='main'>
 
-      <div className="container-cards">
-        {
-          cards.map(card => {
-            return <Card id={card.id} image={card.image_url} />
-          })
-        }
-      </div>
+        <section className='container-search'>
+          <input type="text"/>
+          <button>Pesquisar</button>
+        </section>
+          
+        <section className="container-cards">
+          {
+            cards.map(card => {
+              return <Card key={card.id} id={card.id} image={card.image_url} />
+            })
+          }
+        </section>
+      </main>
+
+      <footer className='footer'>
+          <span>&copy; Mateus Macedo | Alguns direitos reservados {year}</span>
+      </footer>
     </div>
   )
 }

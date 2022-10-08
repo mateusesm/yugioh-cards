@@ -1,4 +1,92 @@
-div.container-cards {
+div.container {
     display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f013a;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1.6rem;
+    margin: 0rem 3rem 0rem 3rem;
+    cursor: pointer;
+}
+
+.header a h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header .menu  {
+    width: 60rem;
+}
+
+.header .menu .menu-list {
+    display: flex;
+    justify-content: end;
+    font-size: 1.4rem;
+}
+
+.header .menu .menu-list .menu-item {
+    width: auto;
+    margin-top: 1.6rem;
+    text-align: center;
+    border: none;
+}
+
+.header .menu .menu-list .menu-item:hover {
+    border-bottom: 0.4rem solid rgb(234, 0, 255);
+}
+
+.header .menu .menu-list li {
+    list-style: none;
+}
+
+.main {
+    padding-top: 8rem;
+    background-color: #8d6daa;
+}
+
+.main .container-cards {
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 5rem;
     flex-wrap: wrap;
+}
+
+.main .container-cards .card {
+    display: block;
+    max-width: 40rem;
+    padding: 1rem;
+    margin:  1rem;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.main .container-cards .card:hover {
+    transform: scale(1.4);
+}
+
+.main .container-cards .card img {
+    max-width: 250px;
+}
+
+.footer {
+    background-color: #1f013a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    font-size: 1.2rem;
+    color: #fff;
 }

@@ -1,6 +1,6 @@
 export const Card = ({ id, image }) => {
     return (
-        <div key={id} className="card">
+        <div id={id} className="card">
             <img src={image}/>
         </div>
     )
