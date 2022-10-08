@@ -7,7 +7,7 @@ div.container {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: #1f013a;
+    background-color: #230134;
     width: 100vw;
     z-index: 1000;
 }
@@ -42,7 +42,7 @@ div.container {
 }
 
 .header .menu .menu-list .menu-item:hover {
-    border-bottom: 0.4rem solid rgb(234, 0, 255);
+    border-bottom: 0.4rem solid #e4049d;
 }
 
 .header .menu .menu-list li {
@@ -52,6 +52,24 @@ div.container {
 .main {
     padding-top: 8rem;
     background-color: #8d6daa;
+}
+
+.main .container-logo {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0E0F5D;
+}
+
+.main .container-logo .title {
+    color: #fff;
+}
+
+.main .container-logo .image {
+    display: block;
+}
+
+.main .container-logo .image img {
+   max-width: 250px;
 }
 
 .main .container-cards {
@@ -82,7 +100,7 @@ div.container {
 }
 
 .footer {
-    background-color: #1f013a;
+    background-color: #230134;
     display: flex;
     justify-content: center;
     align-items: center;
