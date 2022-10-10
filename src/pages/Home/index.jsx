@@ -11,11 +11,11 @@ export function Home() {
 
   const [ cards, setCards ] = useState([])
 
-  const [ darkMagician, setDarkMagician ] = useState([])
+  const [ darkMagician, setDarkMagician ] = useState({})
 
-  const { name, desc } = darkMagician
+  const { name, desc, image } = darkMagician
 
-  const { image_url } = darkMagician.card_images[2]
+  console.log(darkMagician)
 
   const handleGetCards = useCallback( async () => {
 
@@ -30,20 +30,24 @@ export function Home() {
     }
 
     const localStorageDatas = JSON.parse(localStorage.getItem('cards'))
-
     const { data } = localStorageDatas
-
     const dataCards = data.map(data => (data.card_images[0]))
-
     setCards(() => dataCards )
 
     const localStorageDarkMagician = JSON.parse(localStorage.getItem('darkMagician'))
-
     const dataDarkMagician = localStorageDarkMagician.data[0]
 
-    console.log(dataDarkMagician.card_images)
+    const { name, desc, card_images } = dataDarkMagician
 
-    setDarkMagician(() => dataDarkMagician)
+    const imageDarkMagician = card_images[2].image_url
+
+    const dataDM = {
+      name: name,
+      desc: desc,
+      image: imageDarkMagician
+    }
+
+    setDarkMagician(() => dataDM)
 
   }, [])
 
@@ -80,7 +84,7 @@ export function Home() {
           </div>
 
           <div className='image'>
-            <img src={image_url} alt="Dark Magician" />
+            <img src={image} alt="Dark Magician" />
           </div>
         </section>
 

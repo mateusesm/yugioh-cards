@@ -42,6 +42,7 @@ div.container {
 }
 
 .header .menu .menu-list .menu-item:hover {
+    color: #e4049d;
     border-bottom: 0.4rem solid #e4049d;
 }
 
@@ -50,14 +51,13 @@ div.container {
 }
 
 .main {
-    padding-top: 8rem;
-    background-color: #8d6daa;
+    padding-top: 10rem;
+    background-color: #230134;
 }
 
 .main .container-logo {
     display: flex;
     justify-content: space-around;
-    background-color: #0E0F5D;
 }
 
 .main .container-logo .title {
@@ -73,7 +73,7 @@ div.container {
 }
 
 .main .container-cards {
-    background-color: blueviolet;
+    background-color: #e4049d;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +92,7 @@ div.container {
 }
 
 .main .container-cards .card:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 .main .container-cards .card img {
@@ -100,7 +100,7 @@ div.container {
 }
 
 .footer {
-    background-color: #230134;
+    background-color: #330123;
     display: flex;
     justify-content: center;
     align-items: center;
