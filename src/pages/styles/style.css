@@ -93,12 +93,44 @@ div.container {
     align-items: center;
     width: 100vw;
     max-width: 100%;
-    padding: 1rem 0rem;
+    padding: 2rem 0rem;
 }
 
-.main .container-search .input-search {
-   font-size: 2rem;
+.main .container-search .container-input-and-button {
+    display: flex;
+    justify-content: end;
+    width: 60%;
 }
+
+.main .container-search .container-input-and-button .input-search {
+    font-size: 2rem;
+    margin: 0rem 1rem 0rem 0rem;
+    padding: 0.8rem;
+    border: 0.3rem solid #121214;
+    border-radius: 0.3rem;
+    width: 60%;
+ }
+
+.main .container-search .container-input-and-button .input-search:focus {
+    border: 0.3rem solid #9d00ff;
+} 
+
+.main .container-search .container-input-and-button .button-search {
+    width: 15%;
+    padding: 0.2rem;
+    font-size: 1.6rem;
+    border-radius: 0.3rem;
+    color: #fff;
+    border: 0.2rem solid #9d00ff;
+    background-color: #121214;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.main .container-search .container-input-and-button .button-search:hover {
+    background-color: #9d00ff;
+}
+ 
 
 .main .container-cards {
     display: flex;
