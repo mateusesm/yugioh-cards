@@ -93,20 +93,21 @@ export function Home() {
         <section className='container-search'>
 
           <div className='container-select'>
-            <select className='type'>
-              <option selected disabled value="Tipo">Tipo</option>
+            <select name='tipo' className='select'>
+              <option selected readonly value="default">Tipo</option>
                 <option value="">Luz</option>
                 <option value="">Vento</option>
                 <option value="">Água</option>
 
             </select>
 
-            <select name='Arquétipo' className='archetype'>
-            <option selected disabled value="Arquétipo">Arquétipo</option>
+            <select name='arquétipo' className='select'>
+            <option selected readonly value="default">Arquétipo</option>
                 <option value="">Aqua</option>
                 <option value="">Demônio</option>
                 <option value="">Dragão</option>
             </select>
+
           </div>
 
           <div className='container-input-and-button'>
