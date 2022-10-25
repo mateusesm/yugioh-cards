@@ -15,18 +15,18 @@ export function Home() {
 
   const { name, desc, image } = darkMagician
 
-  console.log(darkMagician)
-
   const handleGetCards = useCallback( async () => {
 
     const offset = Math.floor(Math.random() * 101)
 
     if (!localStorage.key('card') && !localStorage.key('darkMagician')) { 
+
       const objectCards = await getCards(offset ,12)
       localStorage.setItem('cards', JSON.stringify(objectCards))
 
       const objectCardDarkMagician = await getCardByName('Dark Magician')
       localStorage.setItem('darkMagician', JSON.stringify(objectCardDarkMagician))
+
     }
 
     const localStorageDatas = JSON.parse(localStorage.getItem('cards'))
@@ -78,6 +78,7 @@ export function Home() {
       <main className='main'>
 
         <section className='container-logo'>
+
           <div className='title'>
             <h1>{name}</h1>
             <h2>{desc}</h2>
@@ -86,25 +87,46 @@ export function Home() {
           <div className='image'>
             <img src={image} alt="Dark Magician" />
           </div>
+
         </section>
 
         <section className='container-search'>
+
+          <select className='type'>
+            <option selected disabled value=""></option>
+              <option value="">Luz</option>
+              <option value="">Vento</option>
+              <option value="">Água</option>
+
+          </select>
+
+          <select name='Arquétipo' className='archetype'>
+              <option value="">Aqua</option>
+              <option value="">Demônio</option>
+              <option value="">Dragão</option>
+          </select>
+
           <input type="text"/>
           <button>Pesquisar</button>
+
         </section>
           
         <section className="container-cards">
+
           {
             cards.map(card => {
               return <Card key={card.id} id={card.id} image={card.image_url} />
             })
           }
+
         </section>
+
       </main>
 
       <footer className='footer'>
           <span>&copy; Mateus Macedo | Alguns direitos reservados {year}</span>
       </footer>
+      
     </div>
   )
 }

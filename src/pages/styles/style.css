@@ -7,7 +7,8 @@ div.container {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: #230134;
+    /*background-color: #230134;*/
+    background-color: #121214;
     width: 100vw;
     z-index: 1000;
 }
@@ -42,8 +43,9 @@ div.container {
 }
 
 .header .menu .menu-list .menu-item:hover {
-    color: #e4049d;
-    border-bottom: 0.4rem solid #e4049d;
+    /*border-bottom: 0.4rem solid #e4049d;*/
+    border-bottom: 0.4rem solid #9d00ff;
+
 }
 
 .header .menu .menu-list li {
@@ -51,17 +53,27 @@ div.container {
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-top: 10rem;
-    background-color: #230134;
+    background-color: #181820;
 }
 
 .main .container-logo {
     display: flex;
     justify-content: space-around;
+    background-color: #181820;
+    width: 100vw;
+    max-width: 100%;
 }
 
 .main .container-logo .title {
     color: #fff;
+    max-width: 800px;
+    font-size: 4rem;
+    font-weight: bolder;
 }
 
 .main .container-logo .image {
@@ -72,27 +84,32 @@ div.container {
    max-width: 250px;
 }
 
+.main .container-search {
+    background-color: #121214;
+    width: 100vw;
+    max-width: 100%;
+}
+
 .main .container-cards {
-    background-color: #e4049d;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding: 1rem;
     margin-top: 5rem;
     flex-wrap: wrap;
+    width: 100vw;
+    max-width: 90%;
 }
 
 .main .container-cards .card {
     display: block;
     max-width: 40rem;
-    padding: 1rem;
-    margin:  1rem;
+    margin: 3rem 1rem;
     transition: transform .5s;
     cursor: pointer;
 }
 
 .main .container-cards .card:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .main .container-cards .card img {
@@ -100,7 +117,7 @@ div.container {
 }
 
 .footer {
-    background-color: #330123;
+    background-color: #121214;
     display: flex;
     justify-content: center;
     align-items: center;
