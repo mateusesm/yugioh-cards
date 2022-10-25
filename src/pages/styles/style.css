@@ -64,7 +64,9 @@ div.container {
 .main .container-logo {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: #181820;
+    padding: 1rem 0rem;
     width: 100vw;
     max-width: 100%;
 }
@@ -86,15 +88,23 @@ div.container {
 
 .main .container-search {
     background-color: #121214;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100vw;
     max-width: 100%;
+    padding: 1rem 0rem;
+}
+
+.main .container-search .input-search {
+   font-size: 2rem;
 }
 
 .main .container-cards {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 5rem;
+    padding: 1rem 0rem;
     flex-wrap: wrap;
     width: 100vw;
     max-width: 90%;

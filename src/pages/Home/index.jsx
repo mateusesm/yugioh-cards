@@ -92,22 +92,27 @@ export function Home() {
 
         <section className='container-search'>
 
-          <select className='type'>
-            <option selected disabled value=""></option>
-              <option value="">Luz</option>
-              <option value="">Vento</option>
-              <option value="">Água</option>
+          <div className='container-select'>
+            <select className='type'>
+              <option selected disabled value="Tipo">Tipo</option>
+                <option value="">Luz</option>
+                <option value="">Vento</option>
+                <option value="">Água</option>
 
-          </select>
+            </select>
 
-          <select name='Arquétipo' className='archetype'>
-              <option value="">Aqua</option>
-              <option value="">Demônio</option>
-              <option value="">Dragão</option>
-          </select>
+            <select name='Arquétipo' className='archetype'>
+            <option selected disabled value="Arquétipo">Arquétipo</option>
+                <option value="">Aqua</option>
+                <option value="">Demônio</option>
+                <option value="">Dragão</option>
+            </select>
+          </div>
 
-          <input type="text"/>
-          <button>Pesquisar</button>
+          <div className='container-input-and-button'>
+            <input className='input-search' type="text"/>
+            <button className='button-search'>Pesquisar</button>
+          </div>
 
         </section>
           
@@ -126,7 +131,7 @@ export function Home() {
       <footer className='footer'>
           <span>&copy; Mateus Macedo | Alguns direitos reservados {year}</span>
       </footer>
-      
+
     </div>
   )
 }
