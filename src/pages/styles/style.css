@@ -7,7 +7,6 @@ div.container {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    /*background-color: #230134;*/
     background-color: #121214;
     width: 100vw;
     z-index: 1000;
@@ -23,33 +22,6 @@ div.container {
 
 .header a h1 {
     font-family: 'Times New Roman', Times, serif;
-}
-
-.header .menu  {
-    width: 60rem;
-}
-
-.header .menu .menu-list {
-    display: flex;
-    justify-content: end;
-    font-size: 1.4rem;
-}
-
-.header .menu .menu-list .menu-item {
-    width: auto;
-    margin-top: 1.6rem;
-    text-align: center;
-    border: none;
-}
-
-.header .menu .menu-list .menu-item:hover {
-    /*border-bottom: 0.4rem solid #e4049d;*/
-    border-bottom: 0.4rem solid #9d00ff;
-
-}
-
-.header .menu .menu-list li {
-    list-style: none;
 }
 
 .main {
@@ -96,67 +68,6 @@ div.container {
     max-width: 100%;
     padding: 2rem 0rem;
 }
-
-
-.main .container-search .container-select {
-    width: 28%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.main .container-search .container-select .select {
-    width: 40%;
-    padding: 0.8rem;
-    font-size: 1.6rem;
-    background-color: #181820;
-    color: #fff;
-    border-radius: 0.5rem;
-    border: 0.3rem solid #121214;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-.main .container-search .container-select .select:hover {
-    border: 0.3rem solid #9d00ff;
-}
-
-.main .container-search .container-input-and-button {
-    display: flex;
-    justify-content: end;
-    width: 50%;
-}
-
-.main .container-search .container-input-and-button .input-search {
-    font-size: 1.6rem;
-    margin: 0rem 1rem 0rem 0rem;
-    padding: 0.8rem;
-    border: 0.3rem solid #121214;
-    border-radius: 0.5rem;
-    background-color: #181820;
-    color: #fff;
-    width: 60%;
- }
-
-.main .container-search .container-input-and-button .input-search:focus {
-    border: 0.3rem solid #9d00ff;
-} 
-
-.main .container-search .container-input-and-button .button-search {
-    width: 15%;
-    padding: 0.2rem;
-    font-size: 1.6rem;
-    border-radius: 0.5rem;
-    color: #fff;
-    border: 0.2rem solid #9d00ff;
-    background-color: #121214;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-.main .container-search .container-input-and-button .button-search:hover {
-    background-color: #9d00ff;
-}
- 
 
 .main .container-cards {
     display: flex;

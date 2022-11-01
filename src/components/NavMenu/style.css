@@ -1,0 +1,53 @@
+.header .menu  {
+    width: 60rem;
+}
+
+.header .menu .menu-list {
+    display: flex;
+    justify-content: end;
+    font-size: 1.4rem;
+}
+
+.header .menu .menu-list .menu-item {
+    width: auto;
+    margin-top: 1.6rem;
+    text-align: center;
+    border: none;
+}
+
+.header .menu .menu-list .menu-item:hover {
+    /*border-bottom: 0.4rem solid #e4049d;*/
+    border-bottom: 0.4rem solid #9d00ff;
+
+}
+
+.header .menu .menu-list li {
+    list-style: none;
+}
+
+.header .menu  {
+    width: 60rem;
+}
+
+.header .menu .menu-list {
+    display: flex;
+    justify-content: end;
+    font-size: 1.4rem;
+}
+
+.header .menu .menu-list .menu-item {
+    width: auto;
+    margin-top: 1.6rem;
+    text-align: center;
+    border: none;
+}
+
+.header .menu .menu-list .menu-item:hover {
+    /*border-bottom: 0.4rem solid #e4049d;*/
+    border-bottom: 0.4rem solid #9d00ff;
+
+}
+
+.header .menu .menu-list li {
+    list-style: none;
+}

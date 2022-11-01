@@ -3,6 +3,12 @@ import { useState, useEffect, useCallback } from 'react'
 
 import { Card } from '../../components/Card'
 
+import { NavMenu } from '../../components/NavMenu'
+
+import { Select } from '../../components/Select'
+
+import { Search } from '../../components/Search'
+
 import { getCardByName, getCards } from '../../utils/getCards'
 
 import '../styles/style.css'
@@ -60,20 +66,27 @@ export function Home() {
   const data = new Date()
   const year = data.getFullYear()
 
+  const dataSelect = [
+    {
+      id: 1,
+      type: 'Tipo',
+      values: ['Luz', 'vento', 'agua']
+    },
+
+    {
+      id: 2,
+      type: 'Arquétipo',
+      values: ['Aqua', 'Demônio', 'Dragão']
+    }
+  ]
+
   return (
     <div className="container">
 
       <header className='header'>
         <a href="#"><h1>Yu-Gi-Oh!</h1></a>
-
-        <nav className='menu'>
-          <ul className='menu-list'>
-            <a className='menu-item' href="https://ygoprodeck.com/api-guide/" target='_blank'><li>API YGO PRO Deck</li></a>
-            <a className='menu-item' href="https://github.com/mateusesm" target='_blank'><li>GitHub</li></a>
-            <a className='menu-item' href="https://linkedin.com/in/mateusesm" target='_blank'><li>LinkedIn</li></a>
-          </ul>
-        </nav>
-      </header>
+        <NavMenu />
+      </header> 
 
       <main className='main'>
 
@@ -81,7 +94,7 @@ export function Home() {
 
           <div className='title'>
             <h1>{name}</h1>
-            <h2>{desc}</h2>
+            <h3>{desc}</h3>
           </div>
 
           <div className='image'>
@@ -93,27 +106,18 @@ export function Home() {
         <section className='container-search'>
 
           <div className='container-select'>
-            <select name='tipo' className='select'>
-              <option selected readonly value="default">Tipo</option>
-                <option value="">Luz</option>
-                <option value="">Vento</option>
-                <option value="">Água</option>
 
-            </select>
-
-            <select name='arquétipo' className='select'>
-            <option selected readonly value="default">Arquétipo</option>
-                <option value="">Aqua</option>
-                <option value="">Demônio</option>
-                <option value="">Dragão</option>
-            </select>
+            {
+              dataSelect.map(select => {
+                return (
+                  <Select key={select.id} type={select.type} values={select.values} />
+                )
+              })
+            }
 
           </div>
 
-          <div className='container-input-and-button'>
-            <input className='input-search' type="text" placeholder='Digite o nome da carta'/>
-            <button className='button-search'>Pesquisar</button>
-          </div>
+          <Search />
 
         </section>
           
