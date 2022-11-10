@@ -1,5 +1,5 @@
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 
 import { Card } from '../../components/Card'
 
@@ -9,29 +9,54 @@ import { Select } from '../../components/Select'
 
 import { Search } from '../../components/Search'
 
-import { getCardByName, getCards } from '../../utils/getCards'
+import { getCardLogo, getCards, getCardsByName } from '../../utils/getCards'
 
 import '../styles/style.css'
 
 export function Home() {
 
   const [ cards, setCards ] = useState([])
+  const [ cardLogo, setCardLogo ] = useState({})
+  const { name, desc, image } = cardLogo
 
-  const [ darkMagician, setDarkMagician ] = useState({})
+  const inputRef = useRef(null)
 
-  const { name, desc, image } = darkMagician
+  const randomOffset = () => {
+    return  Math.floor(Math.random() * 101)
+  }
+
+  const handleCardLogo = useCallback( async () => {
+
+    if (!localStorage.key('card-logo')) { 
+      const objectCardLogo = await getCardLogo('Dark Magician')
+      localStorage.setItem('card-logo', JSON.stringify(objectCardLogo))
+    }
+
+    const localStorageCardLogo = JSON.parse(localStorage.getItem('card-logo'))
+    const cardLogo = localStorageCardLogo.data[0]
+
+    const { name, desc, card_images } = cardLogo
+
+    const imageCardLogo = card_images[2].image_url
+
+    const dataCardLogo = {
+      name: name,
+      desc: desc,
+      image: imageCardLogo
+    }
+
+    setCardLogo(() => dataCardLogo)
+
+  }, [])
 
   const handleGetCards = useCallback( async () => {
 
-    const offset = Math.floor(Math.random() * 101)
+    const offset = randomOffset()
 
-    if (!localStorage.key('card') && !localStorage.key('darkMagician')) { 
+    if (!localStorage.key('cards')) { 
 
       const objectCards = await getCards(offset ,12)
       localStorage.setItem('cards', JSON.stringify(objectCards))
-
-      const objectCardDarkMagician = await getCardByName('Dark Magician')
-      localStorage.setItem('darkMagician', JSON.stringify(objectCardDarkMagician))
 
     }
 
@@ -40,32 +65,38 @@ export function Home() {
     const dataCards = data.map(data => (data.card_images[0]))
     setCards(() => dataCards )
 
-    const localStorageDarkMagician = JSON.parse(localStorage.getItem('darkMagician'))
-    const dataDarkMagician = localStorageDarkMagician.data[0]
+  }, [])
 
-    const { name, desc, card_images } = dataDarkMagician
+  const handleClick = useCallback(async () => {
+    const nameCard = inputRef.current.value
 
-    const imageDarkMagician = card_images[2].image_url
+    const objectCards = await getCardsByName(nameCard)
 
-    const dataDM = {
-      name: name,
-      desc: desc,
-      image: imageDarkMagician
+    if (objectCards.error) {
+
+      alert('Nenhuma carta encontrada! Verifique o nome pesquisado e tente novamente!')
+      return 
     }
+    
+    const { data } = objectCards
+    const dataCards = data.map(data => (data.card_images[0]))
 
-    setDarkMagician(() => dataDM)
+    setCards(() => dataCards )
 
   }, [])
 
   useEffect(() => {
 
+    handleCardLogo()
     handleGetCards()
 
-  }, [handleGetCards])
+  }, [handleCardLogo,handleGetCards])
 
-  const data = new Date()
-  const year = data.getFullYear()
-
+  const generateDate = () => {
+    const data = new Date()
+    return data.getFullYear()
+  }
+ 
   const dataSelect = [
     {
       id: 1,
@@ -117,7 +148,7 @@ export function Home() {
 
           </div>
 
-          <Search />
+          <Search inputRef={inputRef} handleClick={handleClick} />
 
         </section>
           
@@ -134,7 +165,7 @@ export function Home() {
       </main>
 
       <footer className='footer'>
-          <span>&copy; Mateus Macedo | Alguns direitos reservados {year}</span>
+          <span>&copy; Mateus Macedo | Alguns direitos reservados {generateDate()}</span>
       </footer>
 
     </div>
