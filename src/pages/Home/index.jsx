@@ -23,7 +23,7 @@ export function Home() {
     return  Math.floor(Math.random() * 101)
   }
 
-  const handleCardLogo = useCallback( async () => {
+  const handleGetCardLogo = useCallback( async () => {
 
     if (!localStorage.key('card-logo')) { 
       const objectCardLogo = await getCardLogo('Dark Magician')
@@ -50,7 +50,7 @@ export function Home() {
   const handleGetCards = useCallback( async () => {
 
     const offset = randomOffset()
-    const num = 12
+    const num = 24
 
     if (!localStorage.key('cards')) { 
 
@@ -66,7 +66,7 @@ export function Home() {
 
   }, [])
 
-  const handleClick = useCallback(async () => {
+  const handleClickButtonSearch = useCallback( async () => {
     const nameCard = inputRef.current.value
 
     if (!nameCard) {
@@ -92,12 +92,24 @@ export function Home() {
 
   }, [])
 
+  const handleGetRandomCards = useCallback( async() => {
+    const offset = randomOffset()
+    const num = 24
+
+    const objectCards = await getCards(offset, num)
+
+    const { data } = objectCards
+    const dataCards = data.map(data => (data.card_images[0]))
+
+    setCards(() => dataCards )
+  }, [])
+
   useEffect(() => {
 
-    handleCardLogo()
+    handleGetCardLogo()
     handleGetCards()
 
-  }, [handleCardLogo,handleGetCards])
+  }, [handleGetCardLogo,handleGetCards])
 
   const generateDate = () => {
     const data = new Date()
@@ -145,11 +157,11 @@ export function Home() {
 
           <div className='container-search-elements'>
               <div className='container-random-search'>
-                <button className='button-random-search'>Pesquisa aleatória</button>
+                <button onClick={handleGetRandomCards} className='button-random-search'>Pesquisa aleatória</button>
               </div>
 
               <div className='container-input-and-button'>
-                <Search inputRef={inputRef} handleClick={handleClick} />
+                <Search inputRef={inputRef} handleClickButtonSearch={handleClickButtonSearch} />
               </div>
 
           </div>
