@@ -1,9 +1,3 @@
-.main .container-search .container-input-and-button {
-    display: flex;
-    justify-content: end;
-    width: 50%;
-}
-
 .main .container-search .container-input-and-button .input-search {
     font-size: 1.6rem;
     margin: 0rem 1rem 0rem 0rem;

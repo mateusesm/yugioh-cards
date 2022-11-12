@@ -5,8 +5,6 @@ import { Card } from '../../components/Card'
 
 import { NavMenu } from '../../components/NavMenu'
 
-import { Select } from '../../components/Select'
-
 import { Search } from '../../components/Search'
 
 import { getCardLogo, getCards, getCardsByName } from '../../utils/getCards'
@@ -52,10 +50,11 @@ export function Home() {
   const handleGetCards = useCallback( async () => {
 
     const offset = randomOffset()
+    const num = 12
 
     if (!localStorage.key('cards')) { 
 
-      const objectCards = await getCards(offset ,12)
+      const objectCards = await getCards(offset, num)
       localStorage.setItem('cards', JSON.stringify(objectCards))
 
     }
@@ -70,7 +69,15 @@ export function Home() {
   const handleClick = useCallback(async () => {
     const nameCard = inputRef.current.value
 
-    const objectCards = await getCardsByName(nameCard)
+    if (!nameCard) {
+      alert('Digite o nome da carta para pesquisar!') 
+      return
+    }
+
+    const offset = 0
+    const num = 24
+
+    const objectCards = await getCardsByName(nameCard, offset, num)
 
     if (objectCards.error) {
 
@@ -136,19 +143,16 @@ export function Home() {
 
         <section className='container-search'>
 
-          <div className='container-select'>
+          <div className='container-search-elements'>
+              <div className='container-random-search'>
+                <button className='button-random-search'>Pesquisa aleatória</button>
+              </div>
 
-            {
-              dataSelect.map(select => {
-                return (
-                  <Select key={select.id} type={select.type} values={select.values} />
-                )
-              })
-            }
+              <div className='container-input-and-button'>
+                <Search inputRef={inputRef} handleClick={handleClick} />
+              </div>
 
           </div>
-
-          <Search inputRef={inputRef} handleClick={handleClick} />
 
         </section>
           

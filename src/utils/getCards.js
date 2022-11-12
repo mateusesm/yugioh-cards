@@ -27,10 +27,10 @@ export const getCardLogo = async (name) => {
       
 }
 
-export const getCardsByName = async (name) => {
+export const getCardsByName = async (name, offset, num) => {
 
     try {
-        const response = await fetch(`https://db.ygoprodeck.com/api/v7/cardinfo.php?name=${name}&language=pt`)
+        const response = await fetch(`https://db.ygoprodeck.com/api/v7/cardinfo.php?name=${name}%&offset=${offset}&num=${num}&language=pt`)
         const datas = await response.json()
         return datas
 
