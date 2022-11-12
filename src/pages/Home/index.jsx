@@ -1,10 +1,10 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 
+import { Link } from 'react-router-dom'
+
 import { Card } from '../../components/Card'
-
 import { NavMenu } from '../../components/NavMenu'
-
 import { Search } from '../../components/Search'
 
 import { getCardLogo, getCards, getCardsByName } from '../../utils/getCards'
@@ -134,7 +134,7 @@ export function Home() {
     <div className="container">
 
       <header className='header'>
-        <a href="#"><h1>Yu-Gi-Oh!</h1></a>
+        <Link to='/'><h1>Yu-Gi-Oh!</h1></Link>
         <NavMenu />
       </header> 
 
