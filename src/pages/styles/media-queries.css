@@ -1,0 +1,44 @@
+@media (max-width: 1100px) {
+    html {
+        font-size: 50%;
+    }
+
+    .main .container-logo {
+        max-width: 90%;
+    }
+    
+    .main .container-logo .title {
+        font-size: 3rem;
+    }
+    
+    .main .container-logo .image img {
+       max-width: 200px;
+    }
+    
+    .main .container-search .container-search-elements {
+        width: 90%;
+    }
+
+    .main .container-search .container-search-elements .container-input-and-button {
+        margin-right: 3rem;
+    }
+}
+
+@media (max-width: 690px) {
+    .main .container-logo {
+        flex-direction: column;
+    }
+
+    .main .container-logo .title {
+        text-align: center;
+        font-size: 4rem;
+        margin: 4rem;
+    }
+
+    .main .container-logo .image img {
+        max-width: 300px;
+     }
+     
+}
+
+

@@ -10,6 +10,7 @@ import { Search } from '../../components/Search'
 import { getCardLogo, getCards, getCardsByName } from '../../utils/getCards'
 
 import '../styles/style.css'
+import '../styles/media-queries.css'
 
 export function Home() {
 

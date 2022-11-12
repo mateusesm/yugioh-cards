@@ -1,4 +1,5 @@
 import './style.css'
+import './media-queries.css'
 
 export const Search = ({ inputRef, handleClickButtonSearch }) => {
     return (
