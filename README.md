@@ -1,3 +1,3 @@
-### Projeto feito em React para renderizar cartas de yu-gi-oh por meio de uma API
+### Project made in React for to render yu-gi-oh cards through an API
 
-Projeto ainda em desenvolvimento
+Project still development
