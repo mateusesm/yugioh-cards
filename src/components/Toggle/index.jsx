@@ -1,12 +1,13 @@
 import './style.css'
+import './media-queries.css'
 
-export const Toggle = () => {
+export const Toggle = ({ handleToggle, toggleRef }) => {
     return (
         <div className='container-toggle'>
-            <button className="toggle">
-                <div></div>
-                <div></div>
-                <div></div>
+            <button onClick={handleToggle} ref={toggleRef} className="toggle">
+                <div className='first'></div>
+                <div className='second'></div>
+                <div className='third'></div>
             </button>
         </div>
     )

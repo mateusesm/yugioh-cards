@@ -20,6 +20,8 @@ export function Home() {
   const { name, desc, image } = cardLogo
 
   const inputRef = useRef(null)
+  const toggleRef = useRef(null)
+  const menuRef = useRef(null)
 
   const randomOffset = () => {
     return  Math.floor(Math.random() * 101)
@@ -106,6 +108,11 @@ export function Home() {
     setCards(() => dataCards )
   }, [])
 
+  const handleToggle = () => {
+    toggleRef.current.classList.toggle('active')
+    menuRef.current.classList.toggle('active')
+  }
+
   useEffect(() => {
 
     handleGetCardLogo()
@@ -117,28 +124,14 @@ export function Home() {
     const data = new Date()
     return data.getFullYear()
   }
- 
-  const dataSelect = [
-    {
-      id: 1,
-      type: 'Tipo',
-      values: ['Luz', 'vento', 'agua']
-    },
-
-    {
-      id: 2,
-      type: 'Arquétipo',
-      values: ['Aqua', 'Demônio', 'Dragão']
-    }
-  ]
 
   return (
     <div className="container">
 
       <header className='header'>
         <Link to='/'><h1>Yu-Gi-Oh!</h1></Link>
-        <NavMenu />
-        <Toggle />
+        <NavMenu menuRef={menuRef} />
+        <Toggle handleToggle={handleToggle} toggleRef={toggleRef} />
       </header> 
 
       <main className='main'>

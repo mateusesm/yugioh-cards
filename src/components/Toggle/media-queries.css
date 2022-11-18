@@ -1,0 +1,21 @@
+@media (max-width: 665px) {
+    .container-toggle {
+        display: flex;
+    }
+
+    .container-toggle .active {
+        margin-bottom: 32rem;
+    }
+
+    .container-toggle .active .first {
+        transform: rotate(135deg);
+    }
+
+    .container-toggle .active .second {
+        display: none;
+    }
+
+    .container-toggle .active .third {
+        transform: rotate(-135deg) translate(1.2rem, 1.4rem);
+    }
+}
