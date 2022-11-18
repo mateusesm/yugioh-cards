@@ -27,8 +27,8 @@
      
 }
 
-@media(max-width: 860px) {
-    
+@media(max-width: 840px) {
+
     .main .container-logo .image img {
         max-width: 200px;
     }
