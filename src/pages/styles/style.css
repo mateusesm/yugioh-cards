@@ -45,7 +45,7 @@ div.container {
 
 .main .container-logo .title {
     color: #fff;
-    max-width: 850px;
+    max-width: 80rem;
     font-size: 4rem;
     font-weight: bolder;
 }
@@ -72,7 +72,7 @@ div.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 88%;
 }
 
 .main .container-search .container-search-elements .container-random-search {
@@ -81,7 +81,7 @@ div.container {
 
 .main .container-search .container-search-elements .container-random-search .button-random-search {
     width: 100%;
-    padding: 0.9rem;
+    padding: 1rem;
     font-size: 1.6rem;
     border-radius: 0.5rem;
     color: #fff;
@@ -98,7 +98,7 @@ div.container {
 .main .container-search .container-search-elements .container-input-and-button {
     display: flex;
     justify-content: end;
-    width: 50%;
+    width: 50rem;
 }
 
 .main .container-cards {

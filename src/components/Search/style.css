@@ -6,7 +6,7 @@
     border-radius: 0.5rem;
     background-color: #181820;
     color: #fff;
-    width: 60%;
+    width: 40rem;
  }
 
 .main .container-search .container-input-and-button .input-search:focus {
@@ -14,7 +14,7 @@
 } 
 
 .main .container-search .container-input-and-button .button-search {
-    width: 15%;
+    width: 10rem;
     padding: 0.2rem;
     font-size: 1.6rem;
     border-radius: 0.5rem;
