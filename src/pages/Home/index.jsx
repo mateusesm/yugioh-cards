@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { Card } from '../../components/Card'
 import { NavMenu } from '../../components/NavMenu'
 import { Search } from '../../components/Search'
+import { Toggle } from '../../components/Toggle'
 
 import { getCardLogo, getCards, getCardsByName } from '../../utils/getCards'
 
@@ -137,6 +138,7 @@ export function Home() {
       <header className='header'>
         <Link to='/'><h1>Yu-Gi-Oh!</h1></Link>
         <NavMenu />
+        <Toggle />
       </header> 
 
       <main className='main'>

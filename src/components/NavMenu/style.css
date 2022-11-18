@@ -2,6 +2,7 @@
     display: flex;
     justify-content: end;
     width: 50rem;
+    background-color: rgb(131, 2, 131);
 }
 
 .header .menu .menu-list {
