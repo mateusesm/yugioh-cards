@@ -5,3 +5,14 @@
      }
     
 }
+
+@media(max-width: 410px) {
+    .main .container-search .container-input-and-button .input-search {
+        width: 90%;
+     }
+
+     .main .container-search .container-input-and-button .button-search {
+        width: 40%;
+    }
+    
+}

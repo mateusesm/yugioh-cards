@@ -1,22 +1,27 @@
 @media(max-width: 665px) {
 
-    .header .menu .menu-list {
+    .header .menu {
         display: none;
-        position: relative;
     }
 
-    .header .menu .active  {
-        position: absolute;
+    .header nav.active  {
         display: flex;
-        flex-direction: column;
-        font-size: 2rem;
-        overflow: hidden;
-        margin-top: 200px;
-     
-        background-color: #000085;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        margin: 8rem 12rem 20rem 0rem;
+        padding-top: 10rem;
+        padding-bottom: 50rem; 
+        z-index: 1000;
+        background-color: #121214;
     }
 
-    .header .menu .active a {
+    .header nav.active .menu-list {
+        flex-direction: column;
+    }
+
+    .header nav.active .menu-list .menu-item {
+        margin-bottom: 5rem;
         height: 5rem;
     }
 

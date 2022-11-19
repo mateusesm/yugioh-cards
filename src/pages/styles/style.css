@@ -23,7 +23,6 @@ div.container {
 .header a h1 {
     font-family: 'Times New Roman', Times, serif;
     width: 15rem;
-    background-color: red;
 }
 
 .main {
@@ -74,6 +73,7 @@ div.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.5rem;
     width: 88%;
 }
 

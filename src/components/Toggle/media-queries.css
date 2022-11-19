@@ -1,14 +1,17 @@
 @media (max-width: 665px) {
+
     .container-toggle {
         display: flex;
+        height: 8rem;
     }
 
-    .container-toggle .active {
-        margin-bottom: 32rem;
+    .container-toggle button.active {
+        display: flex;
     }
 
     .container-toggle .active .first {
         transform: rotate(135deg);
+        transition: all .5s;
     }
 
     .container-toggle .active .second {
@@ -17,5 +20,6 @@
 
     .container-toggle .active .third {
         transform: rotate(-135deg) translate(1.2rem, 1.4rem);
+        transition: all .5s;
     }
 }

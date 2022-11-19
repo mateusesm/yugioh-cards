@@ -19,6 +19,7 @@ export function Home() {
   const [ cardLogo, setCardLogo ] = useState({})
   const { name, desc, image } = cardLogo
 
+  const divContainerRef = useRef(null)
   const inputRef = useRef(null)
   const toggleRef = useRef(null)
   const menuRef = useRef(null)
@@ -109,6 +110,8 @@ export function Home() {
   }, [])
 
   const handleToggle = () => {
+  
+    divContainerRef.current.classList.toggle('container-active')
     toggleRef.current.classList.toggle('active')
     menuRef.current.classList.toggle('active')
   }
@@ -126,7 +129,7 @@ export function Home() {
   }
 
   return (
-    <div className="container">
+    <div ref={divContainerRef} className="container">
 
       <header className='header'>
         <Link to='/'><h1>Yu-Gi-Oh!</h1></Link>
