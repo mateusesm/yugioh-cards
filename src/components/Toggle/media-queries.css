@@ -7,7 +7,7 @@
 
     .container-toggle button.active {
         display: flex;
-        margin-top: 1rem;
+        margin-top: 1.6rem;
     }
 
     .container-toggle .active .first {
