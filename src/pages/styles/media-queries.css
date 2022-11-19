@@ -40,6 +40,12 @@
 }
 
 @media(max-width: 665px) {
+
+    .header h1 {
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+
     .container-active {
         position: fixed;
     }
@@ -74,10 +80,6 @@
 }
 
 @media(max-width: 460px) {
-
-    .header h1 {
-        font-size: 3rem;
-    }
 
     .main .container-search .container-search-elements {
         width: 100%;
