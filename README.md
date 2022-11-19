@@ -1,4 +1,4 @@
-### Project made in React for to render yu-gi-oh cards through an API
+### Project made in React for to render YU-GI-OH cards through an API
 
 A Yu-Gi-Oh inspired project that mades available through an API YGOPRODeck API (https://ygoprodeck.com/api-guide/) a site with YU-GI-OH cards.
 
