@@ -30,4 +30,4 @@ npm run dev
 
 The React project will be run on localhost (on some port) and the address will be displayed in the terminal. Put the address in the browser of your choice.
 
-[Click here to see the site YU-GI-OH! Cards](https://yugioh-cards-one.vercel.app/)
+[Click here to see the site YU-GI-OH! Cards](https://yugioh-cards-mateusesm.vercel.app/)
