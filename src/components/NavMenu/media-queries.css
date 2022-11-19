@@ -1,6 +1,6 @@
 @media(max-width: 665px) {
 
-    .header .menu {
+    .header nav.menu {
         display: none;
     }
 
