@@ -74,6 +74,11 @@
 }
 
 @media(max-width: 460px) {
+
+    .header h1 {
+        font-size: 3rem;
+    }
+
     .main .container-search .container-search-elements {
         width: 100%;
     }
