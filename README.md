@@ -1,4 +1,4 @@
-### Project made in React for to render YU-GI-OH cards through an API
+### Project made in React for to render Yu-Gi-Oh cards through an API
 
 A Yu-Gi-Oh inspired project that mades with React available through an API YGOPRODeck API (https://ygoprodeck.com/api-guide/) a site with YU-GI-OH cards.
 
@@ -30,4 +30,4 @@ npm run dev
 
 The React project will be run on localhost (on some port) and the address will be displayed in the terminal. Put the address in the browser of your choice.
 
-[Click here to see the site YU-GI-OH! Cards](https://yugioh-cards-mateusesm.vercel.app/)
+[Click here to see the site Yu-Gi-Oh! Cards](https://yugioh-cards-mateusesm.vercel.app/)
