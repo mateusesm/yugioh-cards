@@ -2,6 +2,18 @@
 
 A Yu-Gi-Oh inspired project that mades with React available through an API YGOPRODeck API (https://ygoprodeck.com/api-guide/) a site with Yu-Gi-Oh cards.
 
+### Below have some images:
+
+#### Examples of show and search cards by name in computer
+![YUGIOH Home](./project-images/yugioh-1.png)
+![YUGIOH Cards](./project-images/yugioh-2.png)
+![YUGIOH Search Cards](./project-images/yugioh-3.png)
+
+#### Examples of show and search cards by name in mobile
+![YUGIOH Home](./project-images/yugioh-mobile-1.png)
+![YUGIOH Cards](./project-images/yugioh-mobile-2.png)
+![YUGIOH Search Cards](./project-images/yugioh-mobile-3.png)
+
 ### Installation
 
 After downloading this project, make sure you have NodeJS installed on your machine by running the following command:
