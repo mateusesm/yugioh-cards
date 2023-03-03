@@ -2,7 +2,7 @@
 
 A Yu-Gi-Oh inspired project that mades with React available through an API YGOPRODeck API (https://ygoprodeck.com/api-guide/) a site with Yu-Gi-Oh cards.
 
-#### Below have some images:
+#### Below it's some images:
 
 #### Examples of show and search cards by name in computer
 ![YUGIOH Home](./project-images/yugioh-1.png)
