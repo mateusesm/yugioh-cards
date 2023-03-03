@@ -21,7 +21,6 @@ After downloading this project, make sure you have NodeJS installed on your mach
 ```bash
 node --version
 ```
-
 The command should to return the NodeJS installed version. If It doesn't return, download it.
 
 ### Running the project
@@ -33,13 +32,11 @@ You can use your preferred package manager (npm, yarn, etc.) to install all depe
 ```bash
 npm install
 ```
-
 Then run the following command:
 
 ```bash
 npm run dev
 ```
-
 The React project will be run on localhost (on some port) and the address will be displayed in the terminal. Put the address in the browser of your choice.
 
 [Click here to see the site Yu-Gi-Oh! Cards](https://yugioh-cards-mateusesm.vercel.app/)
